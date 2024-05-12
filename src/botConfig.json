@@ -1,0 +1,5 @@
+{
+    "token"      : "YOUR_TOKEN",
+    "botName"    : "BOT_NAME",
+    "botAddr"    : "https://api.telegram.org/bot"
+}
