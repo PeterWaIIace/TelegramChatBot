@@ -17,7 +17,7 @@ class Processor:
             #"ggml-model-gpt4all-falcon-q4_0.bin",
             model_path="./models")
         self.personality = "You are answering user."
-        self.name = "Jarvis"
+        self.name = "TestBot"
 
     def setPersonality(self, text, name):
         self.personality = text
@@ -51,11 +51,11 @@ class Processor:
 if __name__ == "__main__":
 
     gpt = Processor()
-    assistant = "Jarvis"
+    assistant = "TestBot"
     personality = f"Respond in json with response in TEXT field and information which should be carried to next prompt in CARRY field"
 
     gpt.setPersonality(personality, assistant)
-    prompt = gpt.prompt("user","Mowisz po polsku?","")
+    prompt = gpt.prompt("user","How are you doing?","")
 
     print(f"Asking\n{prompt}")
     response = gpt.model.generate(prompt, max_tokens=1000)
